@@ -1,0 +1,33 @@
+{
+  "slug": "vbot-ptbr-interaction-bench",
+  "short": {
+    "en": "Portuguese Interaction Bench",
+    "pt": "Bancada de Interação em Português"
+  },
+  "tag": {
+    "en": "Language & interaction",
+    "pt": "Linguagem e interação"
+  },
+  "headline": {
+    "en": "Every phrase deserves a clear response.",
+    "pt": "Cada frase merece uma resposta clara."
+  },
+  "description": {
+    "en": "Inspect a small Portuguese text baseline before a robot trial. Explore successful matches, ambiguous requests and deliberate abstentions.",
+    "pt": "Examine uma baseline textual em português antes de um ensaio com o robô. Explore acertos, pedidos ambíguos e abstenções deliberadas."
+  },
+  "color": "#3f5eab",
+  "question": {
+    "en": "Which phrases does an explicit dictionary understand, and where does it abstain?",
+    "pt": "Quais frases um dicionário explícito reconhece e quando ele se abstém?"
+  },
+  "method": "Exact phrase rules, a confusion matrix and per-intent precision/recall",
+  "outcome": {
+    "en": "An inspectable language benchmark that reveals coverage limits instead of hiding them.",
+    "pt": "Uma avaliação de linguagem que revela os limites de cobertura em vez de ocultá-los."
+  },
+  "number": 2,
+  "version": "0.2.0",
+  "source": "https://github.com/galafis/vbot-ptbr-interaction-bench",
+  "demo": "https://galafis.github.io/vbot-ptbr-interaction-bench/"
+}

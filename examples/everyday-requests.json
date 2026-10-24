@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "case-01",
+      "text": "pare",
+      "expected": "stop"
+    },
+    {
+      "id": "case-02",
+      "text": "parar",
+      "expected": "stop"
+    },
+    {
+      "id": "case-03",
+      "text": "fique parado",
+      "expected": "stop"
+    },
+    {
+      "id": "case-04",
+      "text": "parou",
+      "expected": "stop"
+    },
+    {
+      "id": "case-05",
+      "text": "me acompanhe",
+      "expected": "follow"
+    },
+    {
+      "id": "case-06",
+      "text": "me siga",
+      "expected": "follow"
+    },
+    {
+      "id": "case-07",
+      "text": "siga comigo",
+      "expected": "follow"
+    },
+    {
+      "id": "case-08",
+      "text": "tirar foto",
+      "expected": "photo"
+    },
+    {
+      "id": "case-09",
+      "text": "tire uma foto",
+      "expected": "photo"
+    },
+    {
+      "id": "case-10",
+      "text": "qual a bateria",
+      "expected": "status"
+    },
+    {
+      "id": "case-11",
+      "text": "mostre a bateria",
+      "expected": "status"
+    },
+    {
+      "id": "case-12",
+      "text": "status",
+      "expected": "status"
+    },
+    {
+      "id": "case-13",
+      "text": "vem comigo",
+      "expected": "follow"
+    },
+    {
+      "id": "case-14",
+      "text": "por favor me acompanhe",
+      "expected": "follow"
+    },
+    {
+      "id": "case-15",
+      "text": "quero uma foto",
+      "expected": "photo"
+    },
+    {
+      "id": "case-16",
+      "text": "como está a carga",
+      "expected": "status"
+    }
+  ]
+}

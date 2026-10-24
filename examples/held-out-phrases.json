@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "case-01",
+      "text": "anda ao meu lado",
+      "expected": "follow"
+    },
+    {
+      "id": "case-02",
+      "text": "venha junto",
+      "expected": "follow"
+    },
+    {
+      "id": "case-03",
+      "text": "interrompa o movimento",
+      "expected": "stop"
+    },
+    {
+      "id": "case-04",
+      "text": "preciso que pare",
+      "expected": "stop"
+    },
+    {
+      "id": "case-05",
+      "text": "pode fotografar",
+      "expected": "photo"
+    },
+    {
+      "id": "case-06",
+      "text": "registre uma imagem",
+      "expected": "photo"
+    },
+    {
+      "id": "case-07",
+      "text": "quanto resta de energia",
+      "expected": "status"
+    },
+    {
+      "id": "case-08",
+      "text": "qual o nível de carga",
+      "expected": "status"
+    },
+    {
+      "id": "case-09",
+      "text": "vá à cozinha",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-10",
+      "text": "não grave",
+      "expected": "unknown"
+    }
+  ]
+}

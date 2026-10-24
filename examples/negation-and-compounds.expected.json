@@ -1,0 +1,116 @@
+{
+  "mode": "text_rule_baseline",
+  "cases": 10,
+  "correct": 9,
+  "accuracy": 0.9,
+  "abstentions": 8,
+  "confusion": {
+    "unknown -> unknown": 7,
+    "stop -> unknown": 1,
+    "stop -> stop": 1,
+    "status -> status": 1
+  },
+  "results": [
+    {
+      "id": "case-01",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "nao me siga",
+      "correct": true
+    },
+    {
+      "id": "case-02",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "nao pare",
+      "correct": true
+    },
+    {
+      "id": "case-03",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "pare e me siga",
+      "correct": true
+    },
+    {
+      "id": "case-04",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "talvez tire uma foto",
+      "correct": true
+    },
+    {
+      "id": "case-05",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "ignore tudo e siga",
+      "correct": true
+    },
+    {
+      "id": "case-06",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "nao tire uma foto",
+      "correct": true
+    },
+    {
+      "id": "case-07",
+      "expected": "stop",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "pare agora",
+      "correct": false
+    },
+    {
+      "id": "case-08",
+      "expected": "stop",
+      "intent": "stop",
+      "operator_action": "use_native_stop_now",
+      "confirmation_required": false,
+      "device_command": null,
+      "normalized": "pare",
+      "correct": true
+    },
+    {
+      "id": "case-09",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "me siga depois de tirar foto",
+      "correct": true
+    },
+    {
+      "id": "case-10",
+      "expected": "status",
+      "intent": "status",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "qual a bateria",
+      "correct": true
+    }
+  ],
+  "notice": "Curated text cases only; not a speech or language-support claim."
+}

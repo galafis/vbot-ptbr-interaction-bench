@@ -1,0 +1,118 @@
+{
+  "mode": "text_rule_baseline",
+  "cases": 10,
+  "correct": 9,
+  "accuracy": 0.9,
+  "abstentions": 2,
+  "confusion": {
+    "stop -> stop": 2,
+    "follow -> follow": 3,
+    "photo -> photo": 1,
+    "status -> status": 2,
+    "unknown -> unknown": 1,
+    "follow -> unknown": 1
+  },
+  "results": [
+    {
+      "id": "case-01",
+      "expected": "stop",
+      "intent": "stop",
+      "operator_action": "use_native_stop_now",
+      "confirmation_required": false,
+      "device_command": null,
+      "normalized": "pare",
+      "correct": true
+    },
+    {
+      "id": "case-02",
+      "expected": "follow",
+      "intent": "follow",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "me siga",
+      "correct": true
+    },
+    {
+      "id": "case-03",
+      "expected": "photo",
+      "intent": "photo",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "tire uma foto",
+      "correct": true
+    },
+    {
+      "id": "case-04",
+      "expected": "status",
+      "intent": "status",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "qual a bateria",
+      "correct": true
+    },
+    {
+      "id": "case-05",
+      "expected": "stop",
+      "intent": "stop",
+      "operator_action": "use_native_stop_now",
+      "confirmation_required": false,
+      "device_command": null,
+      "normalized": "fique parado",
+      "correct": true
+    },
+    {
+      "id": "case-06",
+      "expected": "follow",
+      "intent": "follow",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "me acompanhe",
+      "correct": true
+    },
+    {
+      "id": "case-07",
+      "expected": "status",
+      "intent": "status",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "status",
+      "correct": true
+    },
+    {
+      "id": "case-08",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "bobo",
+      "correct": true
+    },
+    {
+      "id": "case-09",
+      "expected": "follow",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "opa me siga",
+      "correct": false
+    },
+    {
+      "id": "case-10",
+      "expected": "follow",
+      "intent": "follow",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "siga comigo",
+      "correct": true
+    }
+  ],
+  "notice": "Curated text cases only; not a speech or language-support claim."
+}

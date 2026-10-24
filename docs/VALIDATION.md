@@ -1,9 +1,24 @@
-# Validation · Validação
+# Validation record · Registro de validação
 
-Run `npm test` and `npm run demo` with Node.js 22+. Tests include a hand-derived expected result, invalid inputs and domain failure cases. `tests/engine.test.mjs` defines each assertion. CI runs the same checks on Node 22 and 24; inspect the actual Actions run before claiming remote success.
+## Automated checks
 
-`examples/expected.json` is the reproducible output for `examples/baseline.json`; it is also checked against the engine. There is no stochastic model or external service.
+- Node.js 22 and 24 in GitHub Actions; inspect the actual run for remote status.
+- 19 tests: domain rules, derived insights, five golden examples, bilingual catalog, CLI behavior and local HTTP server behavior.
+- `npm run check` also checks browser-script syntax and reproduces every catalog output.
+- The core version 1 baseline output remains compatible with the first release.
 
-Physical tests performed: **none**. Hardware, native language support, sensor accuracy, stopping response, cloud behavior and social outcomes have not been validated. No Vbot unit was available when this software was created.
+## Independent evidence
 
-PT: Execute os comandos para reproduzir os resultados. Os testes verificam cálculos, falhas e limites de entrada. A integração contínua está configurada para duas versões do Node; o resultado remoto deve ser consultado em Actions. Não houve teste físico. A evidência é de software com dados fictícios.
+Existing hand-derived arithmetic and failure cases remain in tests/engine.test.mjs. New insight cases verify denominators, state/permission behavior, corroboration or sensitivity invariants as appropriate to the domain. Expected-output files are regression fixtures rather than independent correctness proofs.
+
+## Browser review
+
+The release is reviewed for scenario switching, guided controls, language switching, malformed advanced input, report exports and a narrow layout. The repository screenshot is captured from the actual local workbench, not a product mockup. UI review is separate from Node tests.
+
+## Boundaries
+
+No physical robot test has been performed. No clinical, mobility-guidance, emergency-response or accessibility certification is claimed. A standard Vbot without an open SDK is welcome for future native-feature observations. University or participant involvement requires the appropriate authorization.
+
+## Português
+
+A validação automatizada reúne 19 testes, cinco exemplos e verificação da sintaxe da interface. Casos de domínio independentes complementam as saídas esperadas de regressão. A interface é revisada separadamente. Ainda não houve teste físico com Vbot nem validação dos benefícios sociais propostos.

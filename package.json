@@ -1,13 +1,16 @@
 {
   "name": "vbot-ptbr-interaction-bench",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "A small explicit Portuguese phrase interpreter, human-confirmation policy and reproducible benchmark for a future Vbot interaction study.",
+  "description": "Inspect a small Portuguese text baseline before a robot trial. Explore successful matches, ambiguous requests and deliberate abstentions.",
   "scripts": {
     "test": "node --test",
     "demo": "node cli.mjs examples/baseline.json",
-    "serve": "node server.mjs"
+    "study": "node study.mjs examples/baseline.json",
+    "serve": "node server.mjs",
+    "examples:check": "node scripts/check-examples.mjs",
+    "check": "node --check app.mjs && node --test && node scripts/check-examples.mjs"
   },
   "engines": {
     "node": ">=22"

@@ -1,10 +1,115 @@
 <!doctype html>
-<html lang="pt-BR"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Português Interaction Bench · Bancada de Interação</title>
-<style>
-:root{color-scheme:light;--ink:#18343b;--accent:#12695f}*{box-sizing:border-box}body{margin:0;background:#f4f5ef;color:var(--ink);font:16px/1.6 system-ui,sans-serif}main{max-width:1250px;margin:auto;padding:36px 28px}header{border-bottom:1px solid #c5d2ca;padding-bottom:24px}h1{font-size:clamp(28px,4vw,44px);line-height:1.14;letter-spacing:-1px;max-width:950px}h2{font-size:20px}small,.eyebrow{font-size:13px;letter-spacing:.08em;color:#43645f}.top{display:flex;justify-content:space-between;align-items:center}.layout{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;margin-top:28px}textarea{width:100%;min-height:510px;padding:18px;border:1px solid #b5c8be;background:white;border-radius:12px;font:13px/1.5 ui-monospace,monospace;resize:vertical}button,select{font:inherit;border:1px solid #b5c8be;border-radius:7px;padding:9px 14px;cursor:pointer}button{background:var(--accent);color:white}button.secondary,select{background:white;color:var(--ink)}button:disabled{opacity:.5}button:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #cf8d23;outline-offset:3px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}#summary{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}article{padding:16px;background:#e3ece3;border-radius:10px}article span{font-size:12px;display:block}article strong{display:block;font-size:23px;overflow-wrap:anywhere}.scroll{overflow:auto;max-height:450px;margin:20px 0}table{border-collapse:collapse;font-size:12px;width:100%}td,th{text-align:left;padding:9px;border-bottom:1px solid #cbd7cc;vertical-align:top}th{background:#e9eee6}pre{font-size:12px;white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:16px;border-radius:8px}#error{color:#a32619;white-space:pre-wrap}footer{margin-top:30px;border-top:1px solid #c5d2ca;padding-top:18px;font-size:13px}a{color:var(--accent)}@media(max-width:850px){.layout{grid-template-columns:1fr}#summary{grid-template-columns:1fr}main{padding:24px 16px}textarea{min-height:360px}}
-@media print{textarea,.actions,select{display:none}.layout{display:block}body{background:white}details{display:block}}
-</style>
-<main><header><div class="top"><span class="eyebrow">VBOT · RESEARCH WORKBENCH</span><label>Idioma / Language <select id="language"><option value="pt">Português</option><option value="en">English</option></select></label></div><h1 id="title"></h1><p id="intro"></p><strong id="status"></strong></header>
-<div class="layout"><section><h2 id="input"></h2><label for="scenario">JSON · versão/version 1</label><textarea id="scenario" spellcheck="false"></textarea><div class="actions"><button id="run"></button><button id="reset" class="secondary"></button></div><p id="error" role="alert"></p></section>
-<section aria-live="polite"><h2 id="output"></h2><div id="summary"></div><div class="scroll"><table id="table"></table></div><details><summary>JSON completo / Full JSON</summary><pre id="raw"></pre></details><div class="actions"><button id="download" disabled></button></div></section></div>
-<footer><p id="note"></p><p>Gabriel Demetrios Lafis · Independent prototype / Protótipo independente · <a href="docs/VBOT_WORKFLOW.md">Workflow / Fluxo</a> · <a href="README.md">Documentation / Documentação</a></p></footer></main><script type="module" src="./app.mjs"></script></html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="Inspect a small Portuguese text baseline before a robot trial. Explore successful matches, ambiguous requests and deliberate abstentions."
+    />
+    <meta name="theme-color" content="#3f5eab" />
+    <title>Portuguese Interaction Bench · Vbot studies</title>
+    <link rel="icon" href="./assets/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Ir ao estudo / Skip to study</a>
+    <header>
+      <div class="shell header-inner">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">V</span><strong>Vbot studies</strong
+          ><span>/ Gabriel Demetrios Lafis</span>
+        </div>
+        <nav aria-label="Project navigation">
+          <a id="docs-link" href="#">Project guide</a><a id="source-link" href="#">GitHub</a
+          ><label
+            ><span class="skip">Idioma / Language</span
+            ><select id="language" aria-label="Idioma / Language">
+              <option value="pt">Português</option>
+              <option value="en">English</option>
+            </select></label
+          >
+        </nav>
+      </div>
+    </header>
+    <main class="shell" id="main">
+      <section class="hero">
+        <div>
+          <span id="tag" class="eyebrow"></span>
+          <h1 id="hero-title"></h1>
+          <p id="hero-description"></p>
+          <div class="stage"><i aria-hidden="true"></i><span id="stage"></span></div>
+          <a id="results-jump" class="results-jump" href="#current-example">See the result ↓</a>
+        </div>
+        <aside class="hero-aside">
+          <div class="study-no" id="project-number"></div>
+          <span class="eyebrow" id="version-label"></span>
+          <p id="native-note"></p>
+        </aside>
+      </section>
+      <section class="example-section" aria-labelledby="example-heading">
+        <div class="section-heading">
+          <h2 id="example-heading"></h2>
+          <p id="example-hint"></p>
+        </div>
+        <div id="example-list" class="examples"></div>
+      </section>
+      <div class="active-story">
+        <div>
+          <h2 id="current-example"></h2>
+          <p id="context"></p>
+        </div>
+        <button id="reset" class="text-button"></button>
+      </div>
+      <p class="error" id="error" role="alert"></p>
+      <div id="metrics" class="metrics" aria-live="polite"></div>
+      <div class="workspace">
+        <aside id="controls" class="controls" aria-label="Study controls"></aside>
+        <section class="canvas" aria-labelledby="chart-heading">
+          <div class="canvas-head">
+            <h2 id="chart-heading"></h2>
+            <span class="badge">Vbot / study</span>
+          </div>
+          <div class="chart" id="chart"></div>
+          <div class="interpretation">
+            <h3 id="insight-heading"></h3>
+            <p id="insight"></p>
+          </div>
+        </section>
+      </div>
+      <div class="toolbar">
+        <button id="report" class="button primary" disabled></button
+        ><button id="csv" class="button" disabled></button
+        ><button id="export" class="button" disabled></button>
+      </div>
+      <section class="detail-section">
+        <aside class="detail-aside">
+          <span class="eyebrow" id="project-name"></span>
+          <h2 id="table-heading"></h2>
+          <p id="question"></p>
+          <h3 id="scope-title"></h3>
+          <p id="scope-text"></p>
+        </aside>
+        <div>
+          <div class="table-scroll" id="detail-table"></div>
+          <div id="comparison" class="comparison"></div>
+        </div>
+      </section>
+      <details class="advanced">
+        <summary id="advanced-label"></summary>
+        <label id="scenario-label" for="scenario-json"></label
+        ><textarea id="scenario-json" spellcheck="false"></textarea
+        ><button class="button primary" id="apply-json"></button>
+      </details>
+      <footer>
+        <p id="footer-note"></p>
+        <p><b id="scenario-count"></b> <span id="scenario-count-label"></span> · MIT · v0.2.0</p>
+      </footer>
+    </main>
+    <noscript
+      >This workbench requires JavaScript. The repository includes a command-line interface and
+      reproducible examples.</noscript
+    >
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>

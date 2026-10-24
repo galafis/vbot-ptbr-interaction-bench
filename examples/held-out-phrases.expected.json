@@ -1,0 +1,117 @@
+{
+  "mode": "text_rule_baseline",
+  "cases": 10,
+  "correct": 2,
+  "accuracy": 0.2,
+  "abstentions": 10,
+  "confusion": {
+    "follow -> unknown": 2,
+    "stop -> unknown": 2,
+    "photo -> unknown": 2,
+    "status -> unknown": 2,
+    "unknown -> unknown": 2
+  },
+  "results": [
+    {
+      "id": "case-01",
+      "expected": "follow",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "anda ao meu lado",
+      "correct": false
+    },
+    {
+      "id": "case-02",
+      "expected": "follow",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "venha junto",
+      "correct": false
+    },
+    {
+      "id": "case-03",
+      "expected": "stop",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "interrompa o movimento",
+      "correct": false
+    },
+    {
+      "id": "case-04",
+      "expected": "stop",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "preciso que pare",
+      "correct": false
+    },
+    {
+      "id": "case-05",
+      "expected": "photo",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "pode fotografar",
+      "correct": false
+    },
+    {
+      "id": "case-06",
+      "expected": "photo",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "registre uma imagem",
+      "correct": false
+    },
+    {
+      "id": "case-07",
+      "expected": "status",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "quanto resta de energia",
+      "correct": false
+    },
+    {
+      "id": "case-08",
+      "expected": "status",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "qual o nivel de carga",
+      "correct": false
+    },
+    {
+      "id": "case-09",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "va a cozinha",
+      "correct": true
+    },
+    {
+      "id": "case-10",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "nao grave",
+      "correct": true
+    }
+  ],
+  "notice": "Curated text cases only; not a speech or language-support claim."
+}

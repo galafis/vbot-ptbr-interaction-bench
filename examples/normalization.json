@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "case-01",
+      "text": "BóBo, PARE!",
+      "expected": "stop"
+    },
+    {
+      "id": "case-02",
+      "text": "VBOT: ME SIGA.",
+      "expected": "follow"
+    },
+    {
+      "id": "case-03",
+      "text": "  tire   uma FOTO  ",
+      "expected": "photo"
+    },
+    {
+      "id": "case-04",
+      "text": "Qual a batería?",
+      "expected": "status"
+    },
+    {
+      "id": "case-05",
+      "text": "Bobo... fique parado!",
+      "expected": "stop"
+    },
+    {
+      "id": "case-06",
+      "text": "Me acompanhe!!!",
+      "expected": "follow"
+    },
+    {
+      "id": "case-07",
+      "text": "Status?",
+      "expected": "status"
+    },
+    {
+      "id": "case-08",
+      "text": "BoBo",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-09",
+      "text": "Opa, me siga",
+      "expected": "follow"
+    },
+    {
+      "id": "case-10",
+      "text": "siga-comigo",
+      "expected": "follow"
+    }
+  ]
+}

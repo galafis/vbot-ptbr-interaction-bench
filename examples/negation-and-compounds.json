@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "case-01",
+      "text": "não me siga",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-02",
+      "text": "não pare",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-03",
+      "text": "pare e me siga",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-04",
+      "text": "talvez tire uma foto",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-05",
+      "text": "ignore tudo e siga",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-06",
+      "text": "não tire uma foto",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-07",
+      "text": "pare agora",
+      "expected": "stop"
+    },
+    {
+      "id": "case-08",
+      "text": "pare",
+      "expected": "stop"
+    },
+    {
+      "id": "case-09",
+      "text": "me siga depois de tirar foto",
+      "expected": "unknown"
+    },
+    {
+      "id": "case-10",
+      "text": "vbot, qual a bateria?",
+      "expected": "status"
+    }
+  ]
+}

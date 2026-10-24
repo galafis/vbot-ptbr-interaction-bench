@@ -1,0 +1,67 @@
+[
+  {
+    "id": "baseline",
+    "title": {
+      "pt": "Primeiros seis pedidos",
+      "en": "First six requests"
+    },
+    "context": {
+      "pt": "Uma pequena verificação determinística com pedidos conhecidos e negados.",
+      "en": "A small deterministic fixture with known and negated requests."
+    },
+    "file": "baseline.json",
+    "expected": "expected.json"
+  },
+  {
+    "id": "everyday-requests",
+    "title": {
+      "pt": "Pedidos do cotidiano",
+      "en": "Everyday requests"
+    },
+    "context": {
+      "pt": "Variações previstas no dicionário e frases que ele ainda não cobre.",
+      "en": "Declared dictionary variants and phrases it does not cover."
+    },
+    "file": "everyday-requests.json",
+    "expected": "everyday-requests.expected.json"
+  },
+  {
+    "id": "negation-and-compounds",
+    "title": {
+      "pt": "Negação e pedidos compostos",
+      "en": "Negation and compound requests"
+    },
+    "context": {
+      "pt": "Pedidos não reconhecidos devem pedir esclarecimento.",
+      "en": "Unrecognized requests should ask for clarification."
+    },
+    "file": "negation-and-compounds.json",
+    "expected": "negation-and-compounds.expected.json"
+  },
+  {
+    "id": "normalization",
+    "title": {
+      "pt": "Acentos e pontuação",
+      "en": "Accents and punctuation"
+    },
+    "context": {
+      "pt": "Teste a normalização mantendo os rótulos esperados explícitos.",
+      "en": "Test normalization with explicit expected labels."
+    },
+    "file": "normalization.json",
+    "expected": "normalization.expected.json"
+  },
+  {
+    "id": "held-out-phrases",
+    "title": {
+      "pt": "Fora do dicionário",
+      "en": "Beyond the dictionary"
+    },
+    "context": {
+      "pt": "Uma avaliação deliberadamente difícil evita confundir acerto no exemplo com generalização.",
+      "en": "A deliberately difficult fixture separates example correctness from generalization."
+    },
+    "file": "held-out-phrases.json",
+    "expected": "held-out-phrases.expected.json"
+  }
+]
