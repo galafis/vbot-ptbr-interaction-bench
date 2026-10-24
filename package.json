@@ -1,0 +1,16 @@
+{
+  "name": "vbot-ptbr-interaction-bench",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A small explicit Portuguese phrase interpreter, human-confirmation policy and reproducible benchmark for a future Vbot interaction study.",
+  "scripts": {
+    "test": "node --test",
+    "demo": "node cli.mjs examples/baseline.json",
+    "serve": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

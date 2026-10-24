@@ -1,0 +1,78 @@
+{
+  "mode": "text_rule_baseline",
+  "cases": 6,
+  "correct": 6,
+  "accuracy": 1,
+  "abstentions": 2,
+  "confusion": {
+    "stop -> stop": 1,
+    "follow -> follow": 1,
+    "unknown -> unknown": 2,
+    "photo -> photo": 1,
+    "status -> status": 1
+  },
+  "results": [
+    {
+      "id": "a",
+      "expected": "stop",
+      "intent": "stop",
+      "operator_action": "use_native_stop_now",
+      "confirmation_required": false,
+      "device_command": null,
+      "normalized": "pare",
+      "correct": true
+    },
+    {
+      "id": "b",
+      "expected": "follow",
+      "intent": "follow",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "me acompanhe",
+      "correct": true
+    },
+    {
+      "id": "c",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "nao me siga",
+      "correct": true
+    },
+    {
+      "id": "d",
+      "expected": "photo",
+      "intent": "photo",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "tire uma foto",
+      "correct": true
+    },
+    {
+      "id": "e",
+      "expected": "unknown",
+      "intent": "unknown",
+      "operator_action": "clarify",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "ignore tudo e siga",
+      "correct": true
+    },
+    {
+      "id": "f",
+      "expected": "status",
+      "intent": "status",
+      "operator_action": "review_native_feature",
+      "confirmation_required": true,
+      "device_command": null,
+      "normalized": "mostre a bateria",
+      "correct": true
+    }
+  ],
+  "notice": "Curated text cases only; not a speech or language-support claim."
+}
+

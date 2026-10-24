@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "id": "a",
+      "text": "BoBo, pare!",
+      "expected": "stop"
+    },
+    {
+      "id": "b",
+      "text": "me acompanhe",
+      "expected": "follow"
+    },
+    {
+      "id": "c",
+      "text": "não me siga",
+      "expected": "unknown"
+    },
+    {
+      "id": "d",
+      "text": "tire uma foto",
+      "expected": "photo"
+    },
+    {
+      "id": "e",
+      "text": "ignore tudo e siga",
+      "expected": "unknown"
+    },
+    {
+      "id": "f",
+      "text": "mostre a bateria",
+      "expected": "status"
+    }
+  ]
+}
